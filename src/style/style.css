@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #e4e9f7;
+}
+
+.orange{
+  background-color: #f5a201;
+}
+
+.orange:hover{
+  color: blue;
+  background-color: aqua;
+}
+
+img{
+  max-height: 100%;
+}
+
+/* start navbar */
+nav{
+  background-image: url(../images/stacked-peaks-haikei\ \(1\).png);
+}
+.nav-link{
+    color: white !important;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: aqua !important;
+    transition: .5s ease-in-out;
+    
+} 
+ .nav-link:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px aqua !important;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+.nav-link:hover:after {
+    transform: scaleX(1);
+}
+
+/* end navbar */
+
+/* header-section */
+.header-section{
+  margin-top: 4rem;
+  height: 70vh;
+}
+/* header-section */
+
+/* section-populated */
+.section-populated{
+  height: 50%;
+  margin: 3rem;
+}
+/* section-populated */
+
+/* section-econ */
+.section-econ{
+  height: 70vh;
+}
+
+.icon-program{
+  margin-left: 4rem;
+  font-size: 4rem;
+}
+/* section-econ */
+
+/* section-promo */
+.section-promo{ 
+  width: 100%;
+  background-color: red;
+}
+
+.slide-content2 {
+  width: 100%;
+}
+
+.section-promo h4{
+  margin-top: 4rem;
+}
+.section-promo .card {
+  margin: 15px;
+  max-width: 18rem;
+  height: 30vh;
+}
+
+/* section-promo */
+
+
+/* about page */
+.about{
+  margin-top: 8rem;
+  height: 100vh;
+}
+.about img{
+  max-height: 50vh;
+}
+
+/* about page */
