@@ -8,72 +8,72 @@ body {
   background: #e4e9f7;
 }
 
-.orange{
+.orange {
   background-color: #f5a201;
 }
 
-.orange:hover{
+.orange:hover {
   color: blue;
   background-color: aqua;
 }
 
-img{
+img {
   max-height: 100%;
 }
 
 /* start navbar */
-nav{
-  background-image: url(../images/stacked-peaks-haikei\ \(1\).png);
+nav {
+  background-image: url(../images/stacked-peaks-haikei\ 1.png);
 }
-.nav-link{
-    color: white !important;
-    text-decoration: none;
+
+.nav-link {
+  color: white !important;
+  text-decoration: none;
 }
-.nav-link:hover{
-    color: aqua !important;
-    transition: .5s ease-in-out;
-    
-} 
- .nav-link:after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px aqua !important;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+.nav-link:hover {
+  color: aqua !important;
+  transition: 0.5s ease-in-out;
+}
+.nav-link:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px aqua !important;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
 }
 .nav-link:hover:after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /* end navbar */
 
 /* header-section */
-.header-section{
+.header-section {
   margin-top: 4rem;
   height: 70vh;
 }
 /* header-section */
 
 /* section-populated */
-.section-populated{
+.section-populated {
   height: 50%;
   margin: 3rem;
 }
 /* section-populated */
 
 /* section-econ */
-.section-econ{
+.section-econ {
   height: 70vh;
 }
 
-.icon-program{
+.icon-program {
   margin-left: 4rem;
   font-size: 4rem;
 }
 /* section-econ */
 
 /* section-promo */
-.section-promo{ 
+.section-promo {
   width: 100%;
   background-color: #e4e9f7;
 }
@@ -82,7 +82,7 @@ nav{
   width: 100%;
 }
 
-.section-promo h4{
+.section-promo h4 {
   margin-top: 4rem;
 }
 .section-promo .card {
@@ -93,14 +93,26 @@ nav{
 
 /* section-promo */
 
+/* footer */
+footer {
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin-top: 4rem;
+}
+/* footer */
 
 /* about page */
-.about{
+.about {
   margin-top: 8rem;
   height: 100vh;
 }
-.about img{
+.about img {
   max-height: 50vh;
 }
 
 /* about page */
+
+
+ 
