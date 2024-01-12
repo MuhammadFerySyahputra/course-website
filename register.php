@@ -70,6 +70,11 @@
                 <div class="links">
                     Already a member? <a href="login.php">Sign In</a>
                 </div>
+                <a  href="index.php" >
+                    <button type="button" class="orange ">
+                        DASHBOARD
+                    </button>
+                </a>
             </form>
         </div>
         <?php } ?>

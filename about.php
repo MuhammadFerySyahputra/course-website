@@ -48,11 +48,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link text-white" aria-current="page" href="index.html"
+            <a class="nav-link text-white" aria-current="page" href="index.php"
               >Home</a
             >
-            <a class="nav-link text-white" href="about.html">About Us</a>
-            <a class="nav-link text-white" href="#pricelist">Pricelist</a>
+            <a class="nav-link text-white" href="about.php">About Us</a>
+            <a class="nav-link text-white" href="index.php#pricelist">Pricelist</a>
             <a href="login.php">
               <button class="btn orange text-white" type="submit">
                 LOG IN

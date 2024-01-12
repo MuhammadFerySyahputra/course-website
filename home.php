@@ -22,7 +22,7 @@
         </div>
 
         <div class="right-links">
-
+   
             <?php 
             
             $id = $_SESSION['id'];
@@ -33,6 +33,7 @@
                 $res_Email = $result['Email'];
                 $res_id = $result['Id'];
             }
+            echo "<a href='edit.php?Id=$res_id'>Change Profile</a>";
             ?>
 
             <a href="src/php/logout.php"> <button class="btn">Log Out</button> </a>

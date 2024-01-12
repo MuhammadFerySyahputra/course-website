@@ -25,17 +25,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="src/style/style.css" />
     <link rel="icon" href="src/images/backpack.svg" />
+    <link rel="stylesheet" href="src/style/style.css" />
     <title>Edu Komp</title>
   </head> 
 
   <body>
     <!-- NAVBAR -->
-    <nav
-      class="navbar navbar-expand-lg  fixed-top border-bottom border-body"
-      data-bs-theme="dark"
-    >
+    <nav class="navbar navbar-expand-lg  fixed-top border-bottom border-body" data-bs-theme="dark">
       <div class="container">
         <img
           src="src/images/profile.jpg"
@@ -57,11 +54,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link text-white" aria-current="page" href="index.html"
+            <a class="nav-link text-white" aria-current="page" href="index.php"
               >Home</a
             >
-            <a class="nav-link text-white" href="about.html">About Us</a>
-            <a class="nav-link text-white" href="#pricelist">Pricelist</a>
+            <a class="nav-link text-white" href="about.php">About Us</a>
+            <a class="nav-link text-white" href="index.php#pricelist">Pricelist</a>
             <a href="login.php">
               <button class="btn orange text-white" type="submit">
                 LOG IN
@@ -87,7 +84,7 @@
               kebutuhan kamu!
             </p>
             <p class="mt-4">
-              <a class="btn orange" href="#">DAFTAR SEKARANG</a>
+              <a class="btn orange" href="register.php">DAFTAR SEKARANG</a>
             </p>
           </div>
 
@@ -232,13 +229,13 @@
               dari Kami!
             </h4>
             <div class="div mt-4">
-              <a class="btn orange" href="#">DAFTAR SEKARANG</a>
+              <a class="btn orange" href="register.php">DAFTAR SEKARANG</a>
             </div>
           </div>
           <div class="col-8 d-sm-grid">
             <div class="swiper card-group slide-content2">
               <div class="wrapper swiper-wrapper">
-                <a href="#" class="card swiper-slide">
+                <a href="register.php" class="card swiper-slide">
                   <img
                     src="src/images/content/6.png"
                     class="card-img-top program-img"
@@ -248,7 +245,7 @@
                     <h6 class="card-title">Fundamental JavaScript/h6>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide">
+                <a href="register.php" class="card swiper-slide">
                   <img
                     src="src/images/content/7.png"
                     class="card-img-top program-img"
@@ -259,7 +256,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="card swiper-slide">
+                <a href="register.php" class="card swiper-slide">
                   <img
                     src="src/images/content/8.png"
                     class="card-img-top program-img"
@@ -270,7 +267,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="card swiper-slide">
+                <a href="register.php" class="card swiper-slide">
                   <img
                     src="src/images/content/9.png"
                     class="card-img-top program-img"
@@ -281,7 +278,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="card swiper-slide">
+                <a href="register.php" class="card swiper-slide">
                   <img
                     src="src/images/content/10.png"
                     class="card-img-top program-img"
@@ -317,7 +314,7 @@
             </div>
             <div class="swiper content-class">
               <div class="wrapper swiper-wrapper">
-                <a href="daftar.html=?id=1" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/1.png"
                     class="card-img-top program-img"
@@ -353,7 +350,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/2.png"
                     class="card-img-top program-img"
@@ -388,7 +385,8 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/3.png"
                     class="card-img-top program-img"
@@ -423,7 +421,8 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/4.png"
                     class="card-img-top program-img"
@@ -458,7 +457,8 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/5.png"
                     class="card-img-top program-img"
@@ -512,7 +512,7 @@
             </div>
             <div class="swiper content-class">
               <div class="wrapper swiper-wrapper">
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/1.png"
                     class="card-img-top program-img"
@@ -548,7 +548,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/2.png"
                     class="card-img-top program-img"
@@ -583,7 +583,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/3.png"
                     class="card-img-top program-img"
@@ -618,7 +618,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/4.png"
                     class="card-img-top program-img"
@@ -653,7 +653,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="card swiper-slide" style="width: 18rem">
+                <a href="register.php" class="card swiper-slide" style="width: 18rem">
                   <img
                     src="src/images/content/5.png"
                     class="card-img-top program-img"

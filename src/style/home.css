@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #e4e9f7;
+}
+
+.orange {
+  background-color: #f5a201;
+}
+
+.orange:hover {
+  color: blue;
+  background-color: aqua;
+}
+
+img {
+  max-height: 100%;
+}
+
+/* start navbar */
+nav {
+  background-image: url(../images/stacked-peaks-haikei\ 1.png);
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: aqua !important;
+  transition: 0.5s ease-in-out;
+}
+.nav-link:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px aqua !important;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.nav-link:hover:after {
+  transform: scaleX(1);
+}
+
+/* end navbar */
+
+
+/* isi_home */
+
+.isi_home{
+  margin-top: 8rem;
+}
+
+/* section-kelola */
+.section-kelola{
+  margin-top: 6rem;
+}
