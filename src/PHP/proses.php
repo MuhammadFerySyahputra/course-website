@@ -22,6 +22,7 @@
 				$_SESSION['hasil'] = "Data berhasil diperbarui,success";
 				header("location: ../../page/admin/home.php");
 			} else {
+				header("location: ../../page/admin/login.php");
 				echo $berhasil;
 			}
 		}
@@ -34,7 +35,7 @@
 
 		if($berhasil){
 			$_SESSION['hasil'] = "Data berhasil dihapus,success";
-			header("location: index.php");
+			header("location: ../../page/admin/home.php");
 		} else {
 			echo $berhasil;
 		}

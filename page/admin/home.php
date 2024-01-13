@@ -4,8 +4,8 @@
    include("../../src/php/konek.php");
    if(!isset($_SESSION['valid'])){
     header("Location: login.php");
-
-    
+  
+  
     
    }
 ?>
@@ -32,11 +32,7 @@
     <link rel="stylesheet" href="../../src/style/home.css" />
     <title>Document</title>
   </head>
-  <script type="text/javascript">
-      $(document).ready( function () {
-        $('#dt').DataTable();
-      } );
-</script>
+
 
   <body>
     <nav
@@ -45,7 +41,7 @@
     >
       <div class="container">
         <img
-          src="src/images/profile.jpg"
+          src="../../src/images/profile.jpg"
           alt="profile.jpg"
           width="40px"
           class="rounded-circle img-thumbnail"
@@ -88,43 +84,56 @@
           <i class="bi bi-plus-square"></i>
           Tambah Data course
         </a>
+        <?php
+        if(isset($_SESSION['hasil'])):
+          $split = explode(",", $_SESSION['hasil']);
+          ?>
+          <div class="alert alert-<?php echo $split[1];?> alert-dismissible fade show" role="alert">
+            <strong><?php echo $split[0];?></strong>
+				    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			    </div>
+			    <?php
+		  endif;
+		  ?>
       </div>
     </section>
 
     <section class="home-card m-4 d-flex flex-row mb-3">
+      
       <div class="container">
         <div class="row">
           <h2 class="text-center">BARU SAJA DITAMBAHKAN</h2>
-          <div class="card me-3 mt-3 " style="width: 18rem ">
-            <?php
-              $query = "SELECT * FROM product;";
-              $sql = mysqli_query($conn, $query);
-              $no = 0;
-		        while($result = mysqli_fetch_assoc($sql)){
-            ?>
-			      <img src="../../src/images/content/<?php echo $result['Img']; ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $result['Judul']; ?></h5>
-              <a
-                href="kelola.php?ubah=<?php echo $result['Id']; ?>"
-                type="button"
-                class="btn btn-warning btn-sm"
-              >
-                <i class="bi bi-pencil-square"></i> EDIT
-              </a>
-              <a
-                href="proses.php?hapus=<?php echo $result['Id']; ?>"
-                type="button"
-                class="btn btn-danger btn-sm"
-                onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut???')"
-              >
-                <i class="bi bi-trash3"></i> DELETE
-              </a>
-            </div>
+          <?php
+            $query = "SELECT * FROM product;";
+            $sql = mysqli_query($conn, $query);
+            
+            while($result = mysqli_fetch_assoc($sql)){
+              
+              ?>
+              <div class="card me-3 mt-3 " style="width: 18rem ">
+			          <img src="../../src/php/img/<?php echo $result['Img']; ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $result['Judul']; ?></h5>
+                  <a
+                    href="kelola.php?ubah=<?php echo $result['Id']; ?>"
+                    type="button"
+                    class="btn btn-warning btn-sm"
+                  >
+                    <i class="bi bi-pencil-square"></i> EDIT
+                  </a>
+                  <a
+                    href="../../src/php/proses.php?hapus=<?php echo $result['Id']; ?>"
+                    type="button"
+                    class="btn btn-danger btn-sm"
+                    onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut???')"
+                  >
+                    <i class="bi bi-trash3"></i> DELETE
+                  </a>
+                </div>
+              </div>
             <?php 
-			      }
+			        }
 			      ?>
-          </div>
         </div>
       </div>
     </section>

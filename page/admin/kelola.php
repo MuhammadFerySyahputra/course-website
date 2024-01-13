@@ -25,9 +25,9 @@
     $Jadwal = $result['Jadwal'];
     $Harga = $result['Harga'];
     $Diskon = $result['Diskon'];
-}
+    } 
 
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
     />
     <link rel="icon" href="src/images/backpack.svg" />
     <link rel="stylesheet" href="../../src/style/home.css" />
-    <title>Document</title>
+    <title>admin</title>
   </head>
   
   <body>
@@ -61,7 +61,7 @@
     >
       <div class="container">
         <img
-          src="src/images/profile.jpg"
+          src="../../src/images/profile.jpg"
           alt="profile.jpg"
           width="40px"
           class="rounded-circle img-thumbnail"

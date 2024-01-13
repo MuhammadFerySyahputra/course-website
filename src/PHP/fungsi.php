@@ -26,15 +26,14 @@
 	}
 
 	function ubah_data($data, $files){
-
         
-        $Id = $data['Id'];
+		$Id = $data['Id'];
         $Judul = $data['Judul'];
         $Durasi = $data['Durasi'];
         $Jadwal = $data['Jadwal'];
         $Harga = $data['Harga'];
         $Diskon = $data['Diskon'];
-
+		
 		$queryShow = "SELECT * FROM product WHERE Id = '$Id';";
 		$sqlShow = mysqli_query($GLOBALS['conn'], $queryShow);
 		$result = mysqli_fetch_assoc($sqlShow);
@@ -45,30 +44,32 @@
 
 			$split = explode('.', $files['foto']['name']);
 			$ekstensi = $split[count($split)-1];
+			
 
 			$foto = $result['Judul'].'.'.$ekstensi;
 			unlink("img/".$result['Img']);
 			move_uploaded_file($files['foto']['tmp_name'], 'img/'.$foto);
 		}
 
-		$query = "UPDATE product SET Img='$foto', Judul='$Judul', Durasi='$Durasi', Jadwal='$Jadwal', Harga='$Harga', Diskon='$Diskon' WHERE Id='$Id';";
+		$query = "UPDATE product SET Img = '$foto', Judul = '$Judul', Durasi = '$Durasi', Jadwal = '$Jadwal', Harga = '$Harga', Diskon = '$Diskon' WHERE product.Id = '$Id';";
+		// $query = "UPDATE product SET Img='$foto', Judul='$Judul', Durasi='$Durasi', Jadwal='$Jadwal', Harga='$Harga', Diskon='$Diskon' WHERE Id='$Id';";
 		$sql = mysqli_query($GLOBALS['conn'], $query);
 
 		return true;
 	}
 
 	function hapus_data($data){
-		$id_siswa = $data['hapus'];
+		$Id = $data['hapus'];
 
-		$queryShow = "SELECT * FROM tb_siswa WHERE id_siswa = '$id_siswa';";
+		$queryShow = "SELECT * FROM product WHERE Id = '$Id';";
 		$sqlShow = mysqli_query($GLOBALS['conn'], $queryShow);
 		$result = mysqli_fetch_assoc($sqlShow);
 
 		//var_dump($result);
 
-		unlink("img/".$result['foto_siswa']);
+		unlink("img/".$result['Img']);
 
-		$query = "DELETE FROM tb_siswa WHERE id_siswa = '$id_siswa';";
+		$query = "DELETE FROM product WHERE Id = '$Id';";
 		$sql = mysqli_query($GLOBALS['conn'], $query);
 
 		return true;
