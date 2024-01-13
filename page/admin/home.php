@@ -101,7 +101,7 @@
     <section class="home-card m-4 d-flex flex-row mb-3">
       
       <div class="container">
-        <div class="row">
+        <div class="row d-flex">
           <h2 class="text-center">BARU SAJA DITAMBAHKAN</h2>
           <?php
             $query = "SELECT * FROM product;";

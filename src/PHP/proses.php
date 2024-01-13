@@ -15,6 +15,7 @@
 			}
 
 		} else if($_POST['aksi'] == "edit"){
+			
 
 			$berhasil = ubah_data($_POST, $_FILES);
 			

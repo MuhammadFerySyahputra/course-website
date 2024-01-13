@@ -57,8 +57,7 @@
   <body>
     <nav
       class="navbar navbar-expand-lg fixed-top border-bottom border-body"
-      data-bs-theme="dark"
-    >
+      data-bs-theme="dark"    >
       <div class="container">
         <img
           src="../../src/images/profile.jpg"
@@ -101,7 +100,7 @@
 <section class="section-kelola">
   <div class="container">
     <form method="POST" action="../../src/php/proses.php" enctype="multipart/form-data">
-			<input type="hidden" value="<?php echo $Id; ?>" name="id_siswa">
+			<input type="hidden" value="<?php echo $Id; ?>" name="Id">
       <div class="mb-3 row">
 				<label for="foto" class="col-sm-2 col-form-label">
 					Foto 
