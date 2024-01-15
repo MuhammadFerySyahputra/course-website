@@ -22,7 +22,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"
     />
     <link rel="icon" href="src/images/backpack.svg" />
-    <link rel="stylesheet" href="src/style/login.css">
+    <link rel="stylesheet" href="../../src/style/login.css">
     <title>Login</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
         <div class="box form-box">
             <?php 
              
-              include("src/php/konek.php");
+              include("../../src/php/konek.php");
               if(isset($_POST['submit'])){
                 $email = mysqli_real_escape_string($conn,$_POST['email']);
                 $password = mysqli_real_escape_string($conn,$_POST['password']);
@@ -75,10 +75,7 @@
                     
                     <input type="submit" class="btn" name="submit" value="Login" required>
                 </div>
-                <div class="links">
-                    Don't have account? <a href="register.php">Sign Up Now</a>
-                </div>
-                <a  href="index.php" ><button type="button" class="orange">DASHBOARD</button></a>
+                <a  href="../../index.php" ><button type="button" class="orange">DASHBOARD</button></a>
             </form>
         </div>
         <?php } ?>

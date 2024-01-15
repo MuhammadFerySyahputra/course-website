@@ -35,10 +35,10 @@
     <nav class="navbar navbar-expand-lg  fixed-top border-bottom border-body" data-bs-theme="dark">
       <div class="container">
         <img
-          src="src/images/profile.jpg"
+          src="src/images/IMG_7387.PNG"
           alt="profile.jpg"
           width="40px"
-          class="rounded-circle img-thumbnail"
+          class=""
         />
         <a class="navbar-brand text-white ms-3" href="index.html">Edu Komp</a>
         <button
@@ -59,7 +59,7 @@
             >
             <a class="nav-link text-white" href="about.php">About Us</a>
             <a class="nav-link text-white" href="index.php#pricelist">Pricelist</a>
-            <a href="login.php">
+            <a href="page/users/login.php">
               <button class="btn orange text-white" type="submit">
                 LOG IN
               </button>
@@ -103,8 +103,7 @@
     <!-- START POPULATED -->
     <section class="section-populated">
       <div class="container">
-        <div
-          class="populated-bac row d-flex justify-content-center text-center m-lg-3"
+        <div class="populated-bac row d-flex justify-content-center text-center m-lg-3"
         >
           <div class="populated-content col-md-3">
             <h2 class="populated-heading">500++</h2>
@@ -242,7 +241,7 @@
                     alt="..."
                   />
                   <div class="card-body">
-                    <h6 class="card-title">Fundamental JavaScript/h6>
+                    <h6 class="card-title">Fundamental JavaScript</h6>
                   </div>
                 </a>
                 <a href="register.php" class="card swiper-slide">

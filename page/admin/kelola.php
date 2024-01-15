@@ -25,7 +25,8 @@
     $Jadwal = $result['Jadwal'];
     $Harga = $result['Harga'];
     $Diskon = $result['Diskon'];
-    } 
+    $Deskripsi = $result['$Deskripsi'];
+  } 
 
     
 ?>
@@ -120,6 +121,15 @@
 			</div>
 
       <div class="mb-3 row">
+				<label for="Deskripsi" class="col-sm-2 col-form-label">
+					Deskripsi
+				</label>
+				<div class="col-sm-10">
+					<input required type="text" name="Deskripsi" class="form-control" id="Deskripsi" placeholder="" value="<?php echo $Deskripsi; ?>">
+				</div>
+			</div>
+
+      <div class="mb-3 row">
 				<label for="Durasi" class="col-sm-2 col-form-label">
 					Durasi
 				</label>
@@ -161,7 +171,8 @@
 					if(isset($_GET['ubah'])){ 
 					?>
 						<button type="submit" name="aksi" value="edit" class="btn btn-primary">
-							<i class="fa fa-floppy-o" aria-hidden="true"></i>
+              <i class="bi bi-floppy" aria-hidden="true"></i>
+
 							Simpan Perubahan
 						</button>
 					<?php

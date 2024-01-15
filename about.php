@@ -29,10 +29,10 @@
     >
       <div class="container">
         <img
-          src="src/images/profile.jpg"
+          src="src/images/IMG_7387.PNG"
           alt="profile.jpg"
           width="40px"
-          class="rounded-circle img-thumbnail"
+          class=""
         />
         <a class="navbar-brand text-white ms-3" href="index.html">Edu Komp</a>
         <button
@@ -53,7 +53,7 @@
             >
             <a class="nav-link text-white" href="about.php">About Us</a>
             <a class="nav-link text-white" href="index.php#pricelist">Pricelist</a>
-            <a href="login.php">
+            <a href="page/users/login.php">
               <button class="btn orange text-white" type="submit">
                 LOG IN
               </button>

@@ -46,14 +46,37 @@ nav {
 
 /* end navbar */
 
-
 /* isi_home */
 
-.isi_home{
+.isi_home {
   margin-top: 8rem;
 }
 
 /* section-kelola */
-.section-kelola{
+.section-kelola {
   margin-top: 6rem;
+}
+
+/* section detailin */
+.detailin{
+  margin-top: 6rem;
+  width: 100%;
+  justify-content: center;
+  
+}
+
+.detailin img{
+  max-width: 100%;
+  max-width: 100vh;
+  margin-top: 2rem;
+}
+
+
+.isi-detailin{
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.isi-detailin h1{
+  text-transform: uppercase;
 }

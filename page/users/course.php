@@ -1,9 +1,8 @@
 <?php 
    session_start();
-
-   include("src/php/konek.php");
+   include("../../src/php/konek.php");
    if(!isset($_SESSION['valid'])){
-    header("Location: ../login.php");
+    header("Location: ../../login.php");
    }
 ?>
 <!DOCTYPE html>
@@ -36,12 +35,12 @@
     >
       <div class="container">
         <img
-          src="src/images/profile.jpg"
+          src="../../src/images/IMG_7387.PNG"
           alt="profile.jpg"
           width="40px"
-          class="rounded-circle img-thumbnail"
+          class=""
         />
-        <a class="navbar-brand text-white ms-3" href="index.php">Edu Komp</a>
+        <a class="navbar-brand text-white ms-3" href="home.php">Edu Komp</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -55,15 +54,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link text-white" aria-current="page" href="index.html"
+            <a class="nav-link text-white" aria-current="page" href="home.php"
               >Home</a
             >
-            <a class="nav-link text-white" href="about.php">About Us</a>
-            <a class="nav-link text-white" href="course.html">Course</a>
-            <a class="nav-link text-white" href="index.php#pricelist"
+            <a class="nav-link text-white" href="../../about.php">About Us</a>
+            <a class="nav-link text-white" href="course.php">Course</a>
+            <a class="nav-link text-white" href="../../index.php#pricelist"
               >Pricelist</a
             >
-            <a href="src/php/logout.php">
+            <a href="../../src/php/logout.php">
               <button class="btn orange text-white" type="submit">
                 LOG OUT
               </button>
@@ -75,14 +74,23 @@
 
     <section class="isi_home">
       <div class="container">
-        <div class="row">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
+        <div class="row d-flex">
+        <?php
+            $query = "SELECT * FROM product;";
+            $sql = mysqli_query($conn, $query);
+            while($result = mysqli_fetch_assoc($sql)){
+              ?>
+          
+          <div class="card me-3 mt-3" style="width: 18rem">
+			      <img src="../../src/php/img/<?php echo $result['Img']; ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <a href="#" class="btn orange">Enroll</a>
+              <h5 class="card-title"><?php echo $result['Judul']; ?></h5>
+              <a href="detail.php?isi=<?php echo $result['Id']; ?>" class="btn orange">LIHAT</a>
             </div>
           </div>
+          <?php 
+			        }
+			      ?>
         </div>
       </div>
     </section>
