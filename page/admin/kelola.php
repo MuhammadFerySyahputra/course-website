@@ -8,6 +8,8 @@
 
    $Id = '';
    $Judul = ''; 
+   $Deskripsi = ''; 
+   $Yt = ''; 
    $Durasi = '';
    $Jadwal = '';
    $Harga = '';
@@ -21,11 +23,12 @@
 	  $result = mysqli_fetch_assoc($sql);
 
 	  $Judul = $result['Judul'];
+	  $Deskripsi = $result['Deskripsi'];
+	  $Yt = $result['Yt'];
     $Durasi = $result['Durasi'];
     $Jadwal = $result['Jadwal'];
     $Harga = $result['Harga'];
     $Diskon = $result['Diskon'];
-    $Deskripsi = $result['$Deskripsi'];
   } 
 
     
@@ -126,6 +129,15 @@
 				</label>
 				<div class="col-sm-10">
 					<input required type="text" name="Deskripsi" class="form-control" id="Deskripsi" placeholder="" value="<?php echo $Deskripsi; ?>">
+				</div>
+			</div>
+
+      <div class="mb-3 row">
+				<label for="Yt" class="col-sm-2 col-form-label">
+					Yt
+				</label>
+				<div class="col-sm-10">
+					<input required type="text" name="Yt" class="form-control" id="Yt" placeholder="" value="<?php echo $Yt; ?>">
 				</div>
 			</div>
 

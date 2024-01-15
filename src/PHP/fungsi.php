@@ -4,6 +4,8 @@
 	function tambah_data($data, $files){
 
         $Judul = $data['Judul'];
+        $Deskripsi = $data['Deskripsi'];
+        $Yt = $data['Yt'];
         $Durasi = $data['Durasi'];
         $Jadwal = $data['Jadwal'];
         $Harga = $data['Harga'];
@@ -19,7 +21,7 @@
 
 		move_uploaded_file($tmpFile, $dir.$foto);
 
-		$query = "INSERT INTO product VALUES(null, '$foto', '$Judul', '$Durasi', '$Jadwal', '$Harga', '$Diskon')";
+		$query = "INSERT INTO product VALUES(null, '$foto', '$Judul', '$Deskripsi', '$Yt', '$Durasi', '$Jadwal', '$Harga', '$Diskon')";
 		$sql = mysqli_query($GLOBALS['conn'], $query);
 
 		return true;
@@ -29,6 +31,8 @@
 
 		$Id = $data['Id'];
 		$Judul = $data['Judul'];
+        $Deskripsi = $data['Deskripsi'];
+        $Yt = $data['Yt'];
 		$Durasi = $data['Durasi'];
 		$Jadwal = $data['Jadwal'];
 		$Harga = $data['Harga'];
@@ -50,7 +54,7 @@
 			move_uploaded_file($files['foto']['tmp_name'], 'img/'.$foto);
 		}
 
-		$query = "UPDATE product SET Img = '$foto', Judul='$Judul', Durasi='$Durasi', Jadwal='$Jadwal', Harga='$Harga', Diskon='$Diskon' WHERE Id='$Id';";
+		$query = "UPDATE product SET Img = '$foto', Judul='$Judul', Deskripsi='$Deskripsi', Yt='$Yt', Durasi='$Durasi', Jadwal='$Jadwal', Harga='$Harga', Diskon='$Diskon' WHERE Id='$Id';";
 		$sql = mysqli_query($GLOBALS['conn'], $query);
 
 		return true;

@@ -85,7 +85,18 @@
 			      <img src="../../src/php/img/<?php echo $result['Img']; ?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><?php echo $result['Judul']; ?></h5>
-              <a href="detail.php?isi=<?php echo $result['Id']; ?>" class="btn orange">LIHAT</a>
+              <div class="row text-start pt-4">
+                <div class="col-12 col-md-6">
+                  <h5 class="card-title">Normal </h5>
+                  <h5 class="card-title"><s><?php echo $result['Harga']; ?></s></h5>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h5 class="card-title">Promo </h5>
+                  <h5 class="card-title"><?php echo $result['Harga']; ?></h5>
+                  
+                </div>
+                <a href="detail.php?isi=<?php echo $result['Id']; ?>" class="btn orange">LIHAT</a>
+              </div>
             </div>
           </div>
           <?php 
@@ -94,5 +105,8 @@
         </div>
       </div>
     </section>
+
+    
+
   </body>
 </html>

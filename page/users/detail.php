@@ -4,9 +4,32 @@
    if(!isset($_SESSION['valid'])){
     header("Location: ../../login.php");
    }
-   $query = "SELECT * FROM product;";
-   $sql = mysqli_query($conn, $query);
-   $result = mysqli_fetch_assoc($sql)
+
+   $Id = '';
+   $Judul = ''; 
+   $Deskripsi = ''; 
+   $Yt = ''; 
+   $Durasi = '';
+   $Jadwal = '';
+   $Harga = '';
+   $Diskon = '';
+
+  if(isset($_GET['isi'])){
+    $Id = $_GET['isi'];
+    $query = "SELECT * FROM product WHERE Id = '$Id';";
+	  $sql = mysqli_query($conn, $query);
+
+	  $result = mysqli_fetch_assoc($sql);
+
+	  $Judul = $result['Judul'];
+	  $Deskripsi = $result['Deskripsi'];
+	  $Yt = $result['Yt'];
+    $Durasi = $result['Durasi'];
+    $Jadwal = $result['Jadwal'];
+    $Harga = $result['Harga'];
+    $Diskon = $result['Diskon'];
+  } 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,46 +100,33 @@
 
     <section class="detailin">
       <div class="container">
-        <div
-          class="row d-flex justify-content-center isi-detailin bg-info bg-opacity-10 border border-info"
-        >
-          <img src="../../src/images/content/2.png" class="w-75 mt-5" alt="" />
+        <div class="row d-flex justify-content-center isi-detailin bg-info bg-opacity-10 border border-info">
+          <img src="../../src/php/img/<?php echo $result['Img']; ?>" class="w-75 mt-5" alt="" />
 
           <div class="text-center mt-4">
-            <h1>judul</h1>
+            <h1><?php echo $result['Judul']; ?></h1>
           </div>
 
           <div class="row w-75 mt-4">
             <h3>Deskripsi</h3>
-
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto explicabo ea non ad, quae dolorem unde repudiandae
-              consequatur natus, nesciunt sit quia. Amet sapiente, aperiam
-              voluptatibus quasi repellendus beatae. Dolore, non! Numquam
-              necessitatibus reprehenderit reiciendis iste facere excepturi
-              tempore illo.
+              <?php echo $result['Deskripsi']; ?>
             </p>
           </div>
 
           <div class="container text-center mt-4">
             <div class="row justify-content-center align-item-center fs-4">
-              <div
-                class="col-6 col-sm-4 m-3 bg-opacity-75 bg-warning border border-warning rounded-end"
-              >
+              <div class="col-6 col-sm-4 m-3 bg-opacity-75 bg-warning border border-warning rounded-end">
                 Durasi
               </div>
-              <div
-                class="col-6 col-sm-4 m-3 bg-opacity-75 bg-warning border border-warning rounded-end"
-              >
+              <div class="col-6 col-sm-4 m-3 bg-opacity-75 bg-warning border border-warning rounded-end">
                 Jadwal
               </div>
 
               <!-- Force next columns to break to new line at md breakpoint and up -->
               <div class="w-100 d-none d-md-block"></div>
-
-              <div class="col-6 col-sm-4">1 bulan</div>
-              <div class="col-6 col-sm-4">14 february 2023</div>
+              <div class="col-6 col-sm-4"><?php echo $result['Durasi']; ?></div>
+              <div class="col-6 col-sm-4"><?php echo $result['Jadwal']; ?></div>
             </div>
           </div>
 
@@ -125,7 +135,7 @@
               class="mt-3"
               width="450"
               height="250"
-              src="https://www.youtube.com/embed/videoseries?si=DV8nS1rd3tQfBj3e&amp;list=PLZS-MHyEIRo59lUBwU-XHH7Ymmb04ffOY"
+              src="<?php echo $result['Yt']; ?>"
               title="YouTube video player"
               frameborder="0"
               allow=" autoplay; "
@@ -136,18 +146,16 @@
       </div>
     </section>
 
-    <!-- <section class="home-card m-4 d-flex flex-row mb-3">
-      <div class="container">
-        <div class="row d-flex">
-          <h2 class="text-center">MUNGKIN KAMU TERTARIK</h2>
-          <?php
-            $query = "SELECT * FROM product;";
-            $sql = mysqli_query($conn, $query);
-            
-            while($result = mysqli_fetch_assoc($sql)){
-              
-              ?>
-          <div class="card me-3 mt-3" style="width: 18rem">
+    <section class="mt-4 bg-primary">
+      <h2 class="text-center">MUNGKIN KAMU TERTARIK</h2>
+      <div class="card-group container swiper slide-content2">
+        <div class="swiper-wrapper row d-flex">
+      <?php
+      $query = "SELECT * FROM product;";
+      $sql = mysqli_query($conn, $query);
+      while($result = mysqli_fetch_assoc($sql)){
+          ?>
+          <div class="card me-3 mt-3 swiper-slide m-2 " style="width: 18rem">
             <img
               src="../../src/php/img/<?php echo $result['Img']; ?>"
               class="card-img-top"
@@ -155,74 +163,36 @@
             />
             <div class="card-body">
               <h5 class="card-title"><?php echo $result['Judul']; ?></h5>
-              <a
-                href="detail.php?isi=<?php echo $result['Id']; ?>"
-                class="btn orange"
-                >LIHAT</a
-              >
+              <div class="row text-start pt-4">
+                <div class="col-12 col-md-6">
+                  <h5 class="card-title">Normal</h5>
+                  <h5 class="card-title">
+                    <s><?php echo $result['Harga']; ?></s>
+                  </h5>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h5 class="card-title">Promo</h5>
+                  <h5 class="card-title"><?php echo $result['Harga']; ?></h5>
+                </div>
+                <a
+                  href="detail.php?isi=<?php echo $result['Id']; ?>"
+                  class="btn orange"
+                  >LIHAT</a
+                >
+              </div>
             </div>
           </div>
-          <?php 
-			        }
-			      ?></div>
+        <?php 
+			      }
+			    ?>
+        </div>
+        <div class="m-5 baten">
+          <div class="swiper-pagination bg-success"></div>
+        </div>
       </div>
-    </section> -->
-
-    <section>
-      <div class="swiper card-group slide-content2">
-              <div class="wrapper swiper-wrapper">
-                <a href="register.php" class="card swiper-slide"style="width: 18rem">
-                  <img
-                    src="../../src/images/content/6.png"
-                    class="card-img-top program-img"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h6 class="card-title">Fundamental JavaScript</h6>
-                  </div>
-                </a>
-                
-                <a href="register.php" class="card swiper-slide"style="width: 18rem">
-                  <img
-                    src="../../src/images/content/6.png"
-                    class="card-img-top program-img"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h6 class="card-title">Fundamental JavaScript</h6>
-                  </div>
-                </a>
-                
-                <a href="register.php" class="card swiper-slide"style="width: 18rem">
-                  <img
-                    src="../../src/images/content/6.png"
-                    class="card-img-top program-img"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h6 class="card-title">Fundamental JavaScript</h6>
-                  </div>
-                </a>
-                
-                <a href="register.php" class="card swiper-slide"style="width: 18rem">
-                  <img
-                    src="../../src/images/content/6.png"
-                    class="card-img-top program-img"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h6 class="card-title">Fundamental JavaScript</h6>
-                  </div>
-                </a>
-                
-              </div>
-              <div class="m-5 baten">
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../../src/js/script.js"></script>
   </body>
-  <script src="../src/js/script.js"></script>
 </html>
