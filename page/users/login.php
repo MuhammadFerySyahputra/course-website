@@ -76,11 +76,12 @@
                     <input type="submit" class="btn" name="submit" value="Login" required>
                 </div>
                 <div class="col">
-                  <a  href="../../index.php" ><button type="button" class="orange">DASHBOARD</button></a>
+                  <div class="links">
+                    Don't have account? <a href="../../register.php">Sign Up Now</a>
+                  </div>
                 </div>
                 <div class="col">
-                  One of three columns
-                  <p>test<a href="../../register.pgp"></a></p>
+                  <a  href="../../index.php" ><button type="button" class="orange">DASHBOARD</button></a>
                 </div>
                 
 
