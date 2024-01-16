@@ -83,8 +83,6 @@
                 <div class="col">
                   <a  href="../../index.php" ><button type="button" class="orange">DASHBOARD</button></a>
                 </div>
-                
-
             </form>
         </div>
         <?php } ?>
