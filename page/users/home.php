@@ -58,7 +58,6 @@
               >Home</a
             >
             <a class="nav-link text-white" href="../../about.php">About Us</a>
-            <a class="nav-link text-white" href="course.php">Course</a>
             <a class="nav-link text-white" href="../../index.php#pricelist"
               >Pricelist</a
             >
@@ -72,6 +71,41 @@
       </div>
     </nav>
 
+    <section class="isi_home">
+      <div class="container">
+        <div class="row d-flex">
+        <?php
+            $query = "SELECT * FROM product;";
+            $sql = mysqli_query($conn, $query);
+            while($result = mysqli_fetch_assoc($sql)){
+              ?>
+          
+          <div class="card me-3 mt-3" style="width: 18rem">
+			      <img src="../../src/php/img/<?php echo $result['Img']; ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $result['Judul']; ?></h5>
+              <div class="row text-start pt-4">
+                <div class="col-12 col-md-6">
+                  <h5 class="card-title">Normal </h5>
+                  <h5 class="card-title"><s><?php echo $result['Harga']; ?></s></h5>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h5 class="card-title">Promo </h5>
+                  <h5 class="card-title"><?php echo $result['Harga']; ?></h5>
+                  
+                </div>
+                <a href="detail.php?isi=<?php echo $result['Id']; ?>" class="btn orange">LIHAT</a>
+              </div>
+            </div>
+          </div>
+          <?php 
+			        }
+			      ?>
+        </div>
+      </div>
+    </section>
+
     
+
   </body>
 </html>

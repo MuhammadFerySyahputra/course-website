@@ -75,7 +75,15 @@
                     
                     <input type="submit" class="btn" name="submit" value="Login" required>
                 </div>
-                <a  href="../../index.php" ><button type="button" class="orange">DASHBOARD</button></a>
+                <div class="col">
+                  <a  href="../../index.php" ><button type="button" class="orange">DASHBOARD</button></a>
+                </div>
+                <div class="col">
+                  One of three columns
+                  <p>test<a href="../../register.pgp"></a></p>
+                </div>
+                
+
             </form>
         </div>
         <?php } ?>

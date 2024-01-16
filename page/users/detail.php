@@ -21,6 +21,8 @@
 
 	  $result = mysqli_fetch_assoc($sql);
 
+    
+
 	  $Judul = $result['Judul'];
 	  $Deskripsi = $result['Deskripsi'];
 	  $Yt = $result['Yt'];
@@ -128,9 +130,30 @@
               <div class="col-6 col-sm-4"><?php echo $result['Durasi']; ?></div>
               <div class="col-6 col-sm-4"><?php echo $result['Jadwal']; ?></div>
             </div>
-          </div>
+            <div class="mt-4  ">
+              <div class="container">
+              <div class="d-flex justify-content-center">
+                  <h3 class="me-3"> 
+                    <b style="text-transform: uppercase;">Rp  
+                      <?php echo $result['Diskon']; ?>
+                    </b>
+                  </h3>
+                  <h5>
+                    <s>
+                      <b style="text-transform: uppercase;"> Rp
+                        <?php echo $result['Harga']; ?>
+                      </b>
+                    </s>
+                  </h5>
+                </div>
+                <a href="detail.php?isi=<?php echo $result['Id']; ?>" class="btn orange">BUY NOW!!</a>
+              </div>
+            </div>
 
-          <div class="yt mt-5 bg-info text-center">
+          </div>
+          
+
+          <div class="yt mt-5 text-center">
             <iframe
               class="mt-3"
               width="450"
@@ -146,10 +169,10 @@
       </div>
     </section>
 
-    <section class="mt-4 bg-primary">
+    <section class="mt-4">
       <h2 class="text-center">MUNGKIN KAMU TERTARIK</h2>
       <div class="card-group container swiper slide-content2">
-        <div class="swiper-wrapper row d-flex">
+        <div class="swiper-wrapper">
       <?php
       $query = "SELECT * FROM product;";
       $sql = mysqli_query($conn, $query);
@@ -187,7 +210,7 @@
 			    ?>
         </div>
         <div class="m-5 baten">
-          <div class="swiper-pagination bg-success"></div>
+          <div class="swiper-pagination "></div>
         </div>
       </div>
     </section>

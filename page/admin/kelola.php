@@ -64,10 +64,10 @@
       data-bs-theme="dark"    >
       <div class="container">
         <img
-          src="../../src/images/profile.jpg"
+          src="../../src/images/IMG_7387.PNG"
           alt="profile.jpg"
           width="40px"
-          class="rounded-circle img-thumbnail"
+          class=""
         />
         <a class="navbar-brand text-white ms-3" href="index.php">Edu Komp</a>
         <button
